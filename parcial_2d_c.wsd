@@ -1,0 +1,20 @@
+@startuml
+entity "Libro" as libro {
+  * id : Long
+  --
+  * titulo : String
+  * autor : String
+  * anioPublicacion : int
+  * categoria_id : Long
+}
+
+entity "Categoria" as categoria {
+  * id : Long
+  --
+  * nombre : String
+  * descripcion : String
+  * codigoUnico : String
+}
+
+libro }o--|| categoria : tiene
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+abstract class Audit {
+  + Long id
+  + LocalDateTime createdAt
+  + LocalDateTime updatedAt
+  + LocalDateTime deletedAt
+  + Long createdBy
+  + Long updatedBy
+  + Long deletedBy
+}
+
+class Libro {
+  + String titulo
+  + String autor
+  + int anioPublicacion
+  + Categoria categoria
+}
+
+Libro --|> Audit
+
+class Categoria {
+  + String nombre
+  + String descripcion
+  + String codigoUnico
+}
+
+Categoria --|> Audit
+
+interface LibroFactory {
+  + Libro createLibro(String titulo, String autor, int anioPublicacion, Categoria categoria)
+}
+
+class LibroFactoryImpl {
+}
+
+LibroFactoryImpl ..|> LibroFactory
+
+interface CategoriaFactory {
+  + Categoria createCategoria(String nombre, String descripcion, String codigoUnico)
+}
+
+class CategoriaFactoryImpl {
+}
+
+CategoriaFactoryImpl ..|> CategoriaFactory
+@enduml
