@@ -15,3 +15,5 @@ public class CategoriaController extends ABaseController<Categoria, ICategoriaSe
         super(service, "Categoria");
     }
 }
+    
+
