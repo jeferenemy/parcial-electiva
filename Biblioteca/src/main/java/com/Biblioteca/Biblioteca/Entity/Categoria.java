@@ -39,4 +39,8 @@ public class Categoria extends ABaseEntity{
     public void setCodigoUnico(String codigoUnico) {
         this.codigoUnico = codigoUnico;
     }
+
+    public Categoria() {
+      
+    }
 }

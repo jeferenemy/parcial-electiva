@@ -51,4 +51,8 @@ public class Libro extends ABaseEntity{
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
+
+    public Libro() {
+        
+    }
 }

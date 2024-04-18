@@ -7,14 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.Biblioteca.Biblioteca.Entity.Categoria;
 import com.Biblioteca.Biblioteca.IService.ICategoriaService;
 
-public class CategoriaController {
-    @CrossOrigin(origins = "*")
+ @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/categoria")
-public class PersonController extends ABaseController<Categoria, ICategoriaService> {
-    public PersonController(ICategoriaService service) {
+public class CategoriaController extends ABaseController<Categoria, ICategoriaService> {
+    public CategoriaController(ICategoriaService service) {
         super(service, "Categoria");
     }
-}
-    
 }
