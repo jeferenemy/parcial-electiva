@@ -11,8 +11,8 @@ public class LibroController {
     @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("api/libro")
-public class PersonController extends ABaseController<Libro, ILibroService> {
-    public PersonController(ILibroService service) {
+public class LibroController extends ABaseController<Libro, ILibroService> {
+    public LibroController(ILibroService service) {
         super(service, "Libro");
     }
 }
